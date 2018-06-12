@@ -21,7 +21,6 @@ public class Calculator {
         double num;
         if(scanner.hasNextDouble()){
             num = scanner.nextDouble();
-            //num = scanner.nextInt();
         } else {
             System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
             scanner.next();//рекурсия

@@ -30,11 +30,6 @@ public class CalculatorTests {
         assertEquals(15, Calculator.calculate(3,12,'+'),0);
     }
 
-    @Ignore
-    public void TestCalculateForAdditionZeroBeforeInt() {
-        assertEquals(27, Calculator.calculate(0012,15,'+'),0);
-    }
-
     @org.junit.Test
     public void TestCalculateForAdditionNull() {
         assertEquals(5, Calculator.calculate(0,5,'+'),0);
@@ -45,16 +40,19 @@ public class CalculatorTests {
         assertEquals(12.202, Calculator.calculate(2/1000,64/5,'+'),0.3);
     }
 
+    @Ignore
+    public void TestCalculateForAdditionZeroBeforeInt() {
+        assertEquals(27, Calculator.calculate(0012,15,'+'),0);
+    }
+
     @org.junit.Test
     public void TestCalculateForAdditionDoubleWithPoint() {
         assertEquals(12.802, Calculator.calculate(0.002,12.800,'+'),0.0001);
-        //перепроверить точность
     }
 
     @org.junit.Test
     public void TestCalculateForAdditionMaxDoubleWithPoint() {
         assertEquals(9.8999999999128E12, Calculator.calculate(0.0000000002,9899999999912.80000001,'+'),0);
-        //округляет
     }
 
     @org.junit.Test
@@ -75,7 +73,6 @@ public class CalculatorTests {
     @org.junit.Test
     public void TestCalculateForSubtractionDouble() {
         assertEquals(10.4, Calculator.calculate(23.2,12.8,'-'),0.01);
-        // не проходит
     }
 
     @org.junit.Test
@@ -93,10 +90,11 @@ public class CalculatorTests {
         assertEquals(16.0, Calculator.calculate(3.2,5,'*'),0);
     }
 
-    @Ignore
+    @org.junit.Test
     public void TestCalculateForDivisionDouble() {
         assertEquals(16.2, Calculator.calculate(32.4,2,'/'),0);
     }
+
     @org.junit.Test
     public void TestCalculateForDivisionInt() {
         assertEquals(16, Calculator.calculate(32,2,'/'),0);

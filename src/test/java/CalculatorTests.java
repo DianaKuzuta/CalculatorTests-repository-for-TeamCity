@@ -107,7 +107,6 @@ public class CalculatorTests {
 
     @org.junit.Test
     public void TestCalculateForDivisionNullEx() {
-        //assertEquals(0, Calculator.calculate(4,0,'/'),0);
         assertNotSame("Ошибка. На ноль делить нельзя.",0,Calculator.calculate(4,0,'/'));
     }
 }
